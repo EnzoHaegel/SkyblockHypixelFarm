@@ -1,0 +1,2 @@
+C:\Program Files\Eclipse Adoptium\jdk-17.0.6.10-hotspot\bin
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath

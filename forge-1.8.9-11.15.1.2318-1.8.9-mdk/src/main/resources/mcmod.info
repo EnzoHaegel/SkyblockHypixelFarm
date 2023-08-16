@@ -1,0 +1,16 @@
+[
+{
+  "modid": "SkyblockAutoFarm",
+  "name": "Skyblock AutoFarm",
+  "description": "A Hypixel Skyblock mod that can auto farm in garden",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Icenore"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
