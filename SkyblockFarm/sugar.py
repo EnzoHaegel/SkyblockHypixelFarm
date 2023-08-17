@@ -2,12 +2,19 @@ import time
 import keyboard
 import mouse
 
-LINE_TIME = 40
+LINE_TIME = 10
 
 def press_key(key, delay=0.5):
     keyboard.press(key)
     time.sleep(delay)
     keyboard.release(key)
+
+def activate_speed():
+    press_key("&", 0.1)
+    mouse.press("right")
+    time.sleep(0.1)
+    mouse.release("right")
+    press_key("é", 0.1)
 
 def tp():
     # press 't' then write : './warp garden' then press enter
@@ -30,10 +37,16 @@ def simulate_key_presses():
             break
     while True:
         tp()
+        activate_speed()
         time.sleep(0.2)
         mouse.press()
-        for _ in range(4):
+        for _ in range(14):
             pattern()
+            mouse.release()
+            time.sleep(0.1)
+            activate_speed()
+            time.sleep(0.1)
+            mouse.press()
         press_key('d', LINE_TIME)
         mouse.release()
 

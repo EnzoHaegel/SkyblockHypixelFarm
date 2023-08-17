@@ -56,7 +56,7 @@ def simulate_key_presses():
         leftstart()
         rightstart()
         leftstart()
-        rightstart()
+        # rightstart()
         # leftstart()
 
 # Start the program

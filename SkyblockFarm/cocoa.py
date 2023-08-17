@@ -2,8 +2,8 @@ import time
 import keyboard
 import mouse
 
-LINE_TIME = 58.5
-STRAFE_TIME = 1
+LINE_TIME = 13.8
+STRAFE_TIME = 0.5
 
 def press_key(key, delay=0.5):
     keyboard.press(key)
@@ -25,10 +25,10 @@ def pattern():
     mouse.press()
     time.sleep(0.1)
     press_key('z', LINE_TIME)
-    press_key('d', STRAFE_TIME)
+    press_key('q', STRAFE_TIME)
     press_key('s', LINE_TIME)
     mouse.release()
-    press_key('d', STRAFE_TIME)
+    press_key('q', STRAFE_TIME)
 
 def simulate_key_presses():
     # Wait for the user to press '9' to start the program
@@ -37,7 +37,7 @@ def simulate_key_presses():
             break
     while True:
         tp()
-        for _ in range(9):
+        for _ in range(11):
             pattern()
 
 # Start the program
