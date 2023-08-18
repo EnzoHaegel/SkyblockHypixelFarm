@@ -2,7 +2,9 @@ import time
 import keyboard
 import mouse
 
-LINE_TIME = 97
+NB_PLOT = 2                     # Nombre de plot collé
+ONE_PLOT_TIME = 24.25
+LINE_TIME = ONE_PLOT_TIME * NB_PLOT
 
 def press_key(key, delay=0.5):
     keyboard.press(key)
@@ -36,6 +38,8 @@ def simulate_key_presses():
         press_key('q', LINE_TIME)
         mouse.release()
         time.sleep(0.2)
+
+        time.sleep((4 - NB_PLOT) * ONE_PLOT_TIME * 5) # Temps d'attente de repousse
 
 # Start the program
 simulate_key_presses()
