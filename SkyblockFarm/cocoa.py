@@ -5,10 +5,12 @@ import mouse
 LINE_TIME = 13.8
 STRAFE_TIME = 0.5
 
+
 def press_key(key, delay=0.5):
     keyboard.press(key)
     time.sleep(delay)
     keyboard.release(key)
+
 
 def tp():
     # press 't' then write : './warp garden' then press enter
@@ -20,6 +22,7 @@ def tp():
     press_key('enter')
     time.sleep(0.2)
 
+
 def pattern():
     time.sleep(0.2)
     mouse.press()
@@ -30,15 +33,17 @@ def pattern():
     mouse.release()
     press_key('q', STRAFE_TIME)
 
+
 def simulate_key_presses():
     # Wait for the user to press '9' to start the program
     while True:
-        if keyboard.is_pressed('9'):
+        if keyboard.is_pressed('9') or keyboard.is_pressed('1'):
             break
     while True:
         tp()
-        for _ in range(11):
+        for _ in range(28):
             pattern()
+
 
 # Start the program
 simulate_key_presses()
